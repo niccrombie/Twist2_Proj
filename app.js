@@ -11,7 +11,7 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://asdf123:asdf123@ds255403.mlab.com:55403/twist2-proj'; // ADD MLAB DATABASE HERE
+var mongoDB = process.env.MONGODB_URI || 'mongodb://asdf123:asdf123@ds255403.mlab.com:55403/twist2-proj'; // ADD MLAB DATABASE HERE
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
