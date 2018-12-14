@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <p>TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities.
+            TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. </p>
+</div>
+<div class="container-fluid">
+    <div class='row'>
+        <p>Use the following form to add a new school</p>
+    </div>
+</div>
+<form action="/catalog/School/create" method="POST">
+	<label for="hs_id">School Code:</label><br>
+	<input name="hs_id" type="number" id="hs_id" value="{{data.hs_id}}">
+	<br><br>
+	<label for="hsName">School Name:</label><br>
+	<input name="hsName" type="text" id="hsName" value="{{data.hsName}}">
+	<br><br>
+	<input type="submit" value="Add School"><br>
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}

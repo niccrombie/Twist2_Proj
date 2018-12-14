@@ -1,0 +1,15 @@
+<form action="/catalog/Session/{{_id}}/update" method="POST">
+	<input name="_id" type="hidden" id="_id" value={{_id}}>
+	<label for="sessionNum">Session Number:</label><br>
+	<input name="sessionNum" type="number" id="sessionNum" value="{{sessionNum}}">
+	<br><br>
+	<label for="time">Session Time:</label><br>
+	<input name="time" type="text" id="time" value="{{time}}">
+	<br><br>
+	<input type="submit" value="Update Session"><br>
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}

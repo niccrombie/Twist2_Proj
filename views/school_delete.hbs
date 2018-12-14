@@ -1,0 +1,6 @@
+<h2>Review before Deleting</h2>
+<h2>School ID: {{school._id}}</h2>
+<p>School Code: {{school.hs_id}}</p>
+<p>School Name: {{school.hsName}}</p>
+<form action="/catalog/School/{{school._id}}/delete" method="POST">
+<input type="submit" value="Remove this School?"><br>

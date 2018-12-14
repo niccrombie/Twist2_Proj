@@ -1,0 +1,10 @@
+<ul>
+    {{#if session_list}}
+    {{#each session_list}}
+    <li><a href="/catalog/Session/{{_id}}">{{Session}}</a> | <a href="/catalog/Session/{{_id}}/update">Update</a>  <a href="/catalog/Session/{{_id}}/delete">Delete</a></li>
+    {{/each}}
+    {{else}}
+        <h1>No Sessions Available</h1>
+    {{/if}}
+</ul>
+<a href="/catalog/Session/create">Create New Session</a>

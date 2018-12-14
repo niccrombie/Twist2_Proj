@@ -1,0 +1,12 @@
+<body>
+<ul>
+    {{#if presenter_list}}
+    {{#each presenter_list}}
+    <li><a href="/catalog/Presenter/{{_id}}">{{name}}</a> | <a href="/catalog/Presenter/{{_id}}/update">Update</a>  <a href="/catalog/Presenter/{{_id}}/delete">Delete</a></li>
+    {{/each}}
+    {{else}}
+        <h1>No presenters</h1>
+    {{/if}}
+</ul>
+<a href="/catalog/presenter/create">Create New presenter</a>
+</body>

@@ -1,0 +1,38 @@
+<body>
+<div class="container-fluid">
+    <p>TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities.
+            TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. </p>
+</div>
+<div class="container-fluid">
+    <div class='row'>
+        <p>Use the following form to add a new participant</p>
+    </div>
+</div>
+<form action="/catalog/Participant/{{participant._id}}/update" method="POST">
+	<input name="_id" type="hidden" id="_id" value="{{participant._id}}">
+	<label for="firtName">First Name:</label><br>
+	<input name="firstName" type="text" id="firstName" value="{{participant.firstName}}"><br><br>
+	<label for="last name">Last Name:</label><br>
+	<input name="lastName" type="text" id="lastName" value="{{participant.lastName}}"><br><br>
+	<label for="address">Address:</label><br>
+	<input name="address" type="text" id="address" value="{{participant.address}}"><br><br>
+	<label for="email">Email:</label><br>
+	<input name="email" type="text" id="email" value="{{participant.email}}"><br><br>
+	<label for="school">School:</label><br>
+	<select name=school" required='true'>
+		<option value="">Select One</option>
+		{{#each schools}}<option value="{{_id}}">{{hsName}}</option>{{/each}}
+	</select><br><br>
+	<label for="interests">Topics:</label><br>
+	<select name=interests" required='true'>
+		<option value="">Select One</option>
+		{{#each interests}}<option value="{{_id}}">{{title}}</option>{{/each}}
+	</select><br><br>
+	<input type="submit" value="update Participant"><br>
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}
+</body>

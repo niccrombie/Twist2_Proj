@@ -1,0 +1,12 @@
+<body>
+<ul>
+    {{#if participant_list}}
+    {{#each participant_list}}
+    <li><a href="/catalog/Participant/{{_id}}">{{name}}</a> | <a href="/catalog/Participant/{{_id}}/update">Update</a>  <a href="/catalog/Participant/{{_id}}/delete">Delete</a></li>
+    {{/each}}
+    {{else}}
+        <h1>No participants</h1>
+    {{/if}}
+</ul>
+<a href="/catalog/participant/create">Create New Participant</a>
+</body>

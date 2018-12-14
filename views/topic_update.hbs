@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <p>TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities.
+            TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. </p>
+</div>
+<div class="container-fluid">
+    <div class='row'>
+        <p>Use the following form to add a new Topic</p>
+    </div>
+</div>
+<form action="/catalog/Topic/{{_id}}/update" method="POST">
+	<input name="_id" type="hidden" id="_id" value={{_id}}>
+	<label for="topicCode">TopicCode:</label><br>
+	<input name="topicCode" type="text" id="topicCode" value="{{topicCode}}"><br><br>
+	<label for="title">Title:</label><br>
+	<input name="title" type="text" id="title" value="{{title}}"><br><br>
+	<label for="description">Description:</label><br>
+	<input name="description" type="text" id="description" value="{{description}}"><br><br>
+	<input type="submit" value="Add Topic"><br>
+</form>
+{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}

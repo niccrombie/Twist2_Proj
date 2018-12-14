@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <p>TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities.
+            TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. </p>
+</div>
+<div class="container-fluid">
+    <div class='row'>
+        <p>Use the following form to add a new session</p>
+    </div>
+</div>
+<form action="/catalog/Session/create" method="POST">
+	<label for="sessionNum">Session Number:</label><br>
+	<input name="sessionNum" type="number" id="sessionNum" value="{{data.sessionNum}}"><br><br>
+	
+	<!--<select name=sessionName" required='true'>
+		<option value=""></option>
+		<option value="Accounting/Finance">Accounting/Finance</option>
+		<option value="Attorney">Attorney</option>
+		<option value="City Government">City Government</option>
+		<option value="Communications and Marketing">Communications and Marketing</option>
+		<option value="Food Science">Food Science</option>
+		<option value="Graphic Designer">Graphic Designer</option>
+		<option value="Highway Patrol">Highway Patrol</option>
+		<option value="Pediatric Care">Pediatric Care</option>
+		<option value="Pharmacy">Pharmacy</option>
+		<option value="Pilot">Pilot</option>
+		<option value="Speech Pathology">Speech Pathology</option>
+		<option value="Social Work/Mental Health">Social Work/Mental Health</option>
+		<option value="Zoo Veterinary Medicine">Zoo Veterinary Medicine</option>
+	</select>-->
+
+	<label for="time">Session Time:</label><br>
+	<input name="time" type="text" id="time" value="{{data.time}}"><br><br>
+	
+	<!--<input type="radio" name="time" value="9:30 AM - 10:00 AM">9:30 AM to 10:00 AM<br>
+	<input type="radio" name="time" value="10:10 AM - 10:40 AM">10:10 AM to 10:40 AM<br>
+	<input type="radio" name="time" value="10:50 AM - 11:20 AM">10:50 AM to 11:20 AM<br> -->
+	<input type="submit" value="Add Session"><br>
+	
+	
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}

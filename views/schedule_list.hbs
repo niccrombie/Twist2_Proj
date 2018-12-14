@@ -1,0 +1,17 @@
+<table style="width:80%">
+<tr>
+<th>Rooms</th>
+{{#each sessions}}
+<th>Session {{sessionNum}}</th>
+{{/each}}
+</tr>
+{{#each rooms}}
+<tr><td><b>{{roomNum}}</b></td></tr>
+{{/each}}
+
+<h3>Topics</h3>
+{{#each topics}}<li>{{title}}</li>{{/each}}
+<h3>Presenters</h3>
+{{#each presenters}}<li>{{lastName}}, {{firstName}}</li>{{/each}}
+<h3>Participants</h3>
+{{#each students}}<li>{{lastName}}, {{firstName}}</li>{{/each}}<br><br>

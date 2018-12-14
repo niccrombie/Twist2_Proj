@@ -1,0 +1,10 @@
+<ul>
+    {{#if topic_list}}
+    {{#each topic_list}}
+    <li><a href="/catalog/Topic/{{_id}}">{{title}}</a> | <a href="/catalog/Topic/{{_id}}/update">Update</a>  <a href="/catalog/Topic/{{_id}}/delete">Delete</a></li>
+    {{/each}}
+    {{else}}
+        <h1>No Topics</h1>
+    {{/if}}
+</ul>
+<a href="/catalog/Topic/create">Create New Topic</a>

@@ -1,0 +1,18 @@
+<form action="/catalog/Room/{{_id}}/update" method="POST">
+	<input name="_id" type="hidden" id="_id" value={{_id}}>
+	<label for="roomNum">Room Number:</label><br>
+	<input name="roomNum" type="text" id="roomNum" value="{{roomNum}}">
+	<br><br>
+	<label for="building">Building:</label><br>
+	<input name="building" type="text" id="building" value="{{building}}">
+	<br><br>
+	<label for="capacity">Capacity:</label><br>
+	<input name="capacity" type="number" id="capacity" value="{{capacity}}">
+	<br><br>
+	<input type="submit" value="Update Room"><br>
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}

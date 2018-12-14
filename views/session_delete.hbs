@@ -1,0 +1,6 @@
+<h2>Review before Deleting</h2>
+<h2>Session ID: {{session._id}}</h2>
+<p>Session Number: {{session.sessionNum}}</p>
+<p>Time: {{session.time}}</p>
+<form action="/catalog/Session/{{session._id}}/delete" method="POST">
+<input type="submit" value="Delete Current Session?"><br>

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <p>TWIST, or Teen Women in Science and Technology, is a one-day conference to expose teen women across the state to various career possibilities.
+            TWIST was developed by K-State Polytechnic and the Salina community more than 25 years ago. </p>
+</div>
+<div class="container-fluid">
+    <div class='row'>
+        <p>Use the following form to add an available room</p>
+    </div>
+</div>
+<form action="/catalog/Room/create" method="POST">
+	<label for="roomNum">Room Number:</label><br>
+	<input name="roomNum" type="text" id="roomNum" value="{{data.roomNum}}">
+	<br><br>
+	<label for="building">Building:</label><br>
+	<input name="building" type="text" id="building" value="{{data.building}}">
+	<br><br>
+	<label for="capacity">Room Capacity:</label><br>
+	<input name="capacity" type="number" id="capacity" value="{{data.capacity}}">
+	<br><br>
+	<input type="submit" value="Add Room"><br>
+</form>
+	{{#if errors}}
+    {{#each errors}}
+	<p>{{this.msg}}</p>
+	{{/each}}
+	{{/if}}
