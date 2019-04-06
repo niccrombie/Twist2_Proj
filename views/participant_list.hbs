@@ -3,7 +3,7 @@
     {{#if participant_list}} <!--  Here Handlebars is doing a simple if else loop to create a list of links, where if there is a participant for the list it will creat a link for each list {{_ID}}.-->
     {{#each participant_list}}
     <li><a href="/catalog/Participant/{{_id}}">{{name}}</a> | <a href="/catalog/Participant/{{_id}}/update">Update</a>  <a href="/catalog/Participant/{{_id}}/delete">Delete</a></li>
-    {{/each}}
+    {{/each}}<!--CLOSES STATEMENT-->
     {{else}}
         <h1>No participants</h1>
     {{/if}}
